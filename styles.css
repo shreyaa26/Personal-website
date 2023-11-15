@@ -18,7 +18,9 @@ body {
 .nav-bar {
   display: flex;
   justify-content: space-between;
-  padding: 18px 150px 100px;
+  padding: 18px 150px;
+  margin-bottom: 113px;
+  border-bottom: 0.1px solid #201f1f;
 }
 
 .logo {
@@ -46,14 +48,15 @@ body {
 
 .right ion-icon {
     vertical-align: middle;
+    font-size: 1em;
 }
 
 .right a {
   text-decoration: none;
 }
 
-.right a:hover {
-  color: #ffffff; /* Change color on hover */
+.right ion-icon:hover, a:hover {
+  color: #ffffff;
 }
 
 .banner-content {
@@ -62,14 +65,16 @@ body {
   margin-right: auto;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 80px;
 }
 
 .banner-left {
     position: relative;
-    border-top: 4px solid transparent;
-    border-left: 4px solid transparent;
+    /* border-top: 4px solid #201f1f; */
+    border-left: 4px solid #201f1f;
     padding: 20px 0px 0px 60px;
     max-width: 600px;
+    border-radius: 20px;
   }
   
   .banner-left::before,
@@ -82,7 +87,7 @@ body {
     height: 100%;
   }
   
-  .banner-left::before {
+  /* .banner-left::before {
     border-top: 4px solid;
     border-image: linear-gradient(to right, rgba(220, 217, 130, 1), rgba(220, 217, 130, 0)) 1;
   }
@@ -90,7 +95,7 @@ body {
   .banner-left::after {
     border-left: 4px solid;
     border-image: linear-gradient(to bottom, rgba(220, 217, 130, 1), rgba(220, 217, 130, 0)) 1;
-  }
+  } */
   
 
 .banner-left h1 {
@@ -117,8 +122,7 @@ body {
 .banner-right ul {
     list-style: none;
     padding-left: 20px;
-    border-left: 4px solid;
-    border-image: linear-gradient(to bottom, rgba(220, 217, 130, 1), rgba(220, 217, 130, 0)) 1;
+    border-left: 4px solid rgba(220, 217, 130, 1);
 }
 
 .banner-right li {
@@ -155,7 +159,7 @@ body {
     text-align: center;
     padding: 5px;
     font-size: 14px;
-    position: fixed; /* Fixed position */
+    position: relative; /* Fixed position */
     bottom: 0; /* Stick it to the bottom */
     width: 100%; /* Full width */
 }
