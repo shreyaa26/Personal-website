@@ -12,12 +12,13 @@ body {
   padding: 0;
   line-height: 1.5;
   background-color: #282828;
+  background: linear-gradient(to right, #282828, #404040);
 }
 
 .nav-bar {
   display: flex;
   justify-content: space-between;
-  padding: 18px 150px 150px;
+  padding: 18px 150px 100px;
 }
 
 .logo {
@@ -49,6 +50,10 @@ body {
 
 .right a {
   text-decoration: none;
+}
+
+.right a:hover {
+  color: #ffffff; /* Change color on hover */
 }
 
 .banner-content {
@@ -136,12 +141,23 @@ body {
     width: 100%;
     height: 2px;
     background-color: rgba(220, 217, 130, 1);
-    transform: scaleX(0); /* Initial state, line is not visible */
-    transform-origin: right; /* Start the transform from the right */
-    transition: transform 0.5s ease; /* Add a smooth transition effect */
+    transform: scaleX(0);
+    transform-origin: right; 
+    transition: transform 0.5s ease; 
   }
   
   .banner-right ul li a:hover::after {
-    transform: scaleX(1); /* Line appears on hover */
-    transform-origin: left; /* The line expands from left to right */
+    transform: scaleX(1); 
+    transform-origin: left; 
   }
+
+  footer {
+    text-align: center;
+    padding: 5px;
+    font-size: 14px;
+    position: fixed; /* Fixed position */
+    bottom: 0; /* Stick it to the bottom */
+    width: 100%; /* Full width */
+}
+
+
